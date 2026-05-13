@@ -1,0 +1,4 @@
+baseURL = 'https://donaldup.github.io/'
+languageCode = 'fr-fr'
+title = 'Donald - PPAI Specialist'
+publishDir = 'docs'

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.161.1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPAI Specialist | Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-glow: rgba(99, 102, 241, 0.4);
+            --accent: #10b981;
+            --bg: #030712;
+            --card-bg: #0f172a;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+         
+        .mesh {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 80% 20%, #1e1b4b 0%, transparent 40%),
+                        radial-gradient(circle at 10% 80%, #020617 0%, transparent 50%);
+            z-index: -1;
+        }
+
+         
+        .navbar {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000; padding: 1rem 0;
+        }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.3rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.85rem; font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+
+         
+        .hero { min-height: 90vh; display: flex; align-items: center; max-width: 1200px; margin: 0 auto; padding: 120px 5% 60px; gap: 60px; }
+        .hero-content { flex: 1.2; }
+        .hero-title { font-size: clamp(2.8rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 800; margin-bottom: 25px; font-family: 'Space Grotesk'; }
+        .gradient-text { background: linear-gradient(to right, #818cf8, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-img { flex: 0.8; position: relative; }
+        .hero-img img { width: 100%; border-radius: 30px; border: 1px solid var(--border); box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+
+         
+        section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-header { margin-bottom: 50px; }
+        .section-title { font-family: 'Space Grotesk'; font-size: 2.5rem; margin-bottom: 15px; }
+        .section-tag { color: var(--primary); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
+
+         
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .card { 
+            background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; 
+            padding: 35px; transition: 0.4s ease; position: relative; overflow: hidden;
+        }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); background: #131c31; }
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; display: block; }
+
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+        .tag { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 8px; font-size: 0.7rem; font-weight: 600; color: var(--text-dim); }
+        .tag:hover { background: var(--primary); color: white; }
+
+         
+        .pub-card { border-left: 4px solid var(--primary); }
+        .status-badge { background: rgba(16, 185, 129, 0.1); color: var(--accent); padding: 4px 10px; border-radius: 6px; font-size: 0.65rem; font-weight: 800; margin-bottom: 15px; display: inline-block; }
+
+         
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .cert-card { 
+            background: rgba(255,255,255,0.02); border: 1px dashed var(--border); 
+            padding: 25px; border-radius: 15px; text-align: center; 
+        }
+
+         
+        .btn { 
+            padding: 12px 28px; border-radius: 12px; font-weight: 700; text-decoration: none; 
+            display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; font-size: 0.9rem;
+        }
+        .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 20px var(--primary-glow); }
+        .btn-outline { border: 1px solid var(--border); color: white; }
+        .btn-outline:hover { background: var(--border); }
+
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 140px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mesh"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand"><i class="material-icons-outlined">security</i> Privacy Preserving AI.RESEARCH</div>
+            <div class="nav-links">
+                <a href="#expertise">Expertise</a>
+                <a href="#publications">Publications</a>
+                <a href="#Conferences">conferences</a>
+                <a href="#projects">Realizations</a>
+                <a href="#certs">Certs</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="section-tag">Privacy-Preserving AI Engineer</p>
+            <h1 class="hero-title">Securing Intelligence with <span class="gradient-text">Applied Cryptography.</span></h1>
+            <p style="color: var(--text-dim); font-size: 1.1rem; margin-bottom: 35px; max-width: 600px;">
+                Specializing in **Federated Learning**, **MPC**, and **FHE**. I bridge the gap between advanced mathematical research and secure, production-ready AI systems.
+            </p>
+            <div style="display: flex; gap: 15px;">
+                <a href="#projects" class="btn btn-primary">View Realizations</a>
+                <a href="https://github.com" target="_blank" class="btn btn-outline"><i class="material-icons-outlined">code</i> GitHub</a>
+                <a href="https://www.linkedin.com/in/rodney-hounkanrin-a860021a5" target="_blank" class="btn btn-outline"><i class="material-icons-outlined">code</i> LinkedIn</a>
+                <a  href="#" target="_blank" class="btn btn-outline"><i class="material-icons-outlined">code</i> Email</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="iv.jpg" alt="Researcher Profile">
+        </div>
+    </header>
+
+    
+    <section id="expertise">
+        <div class="section-header">
+            <p class="section-tag">Technical Core</p>
+            <h2 class="section-title">Privacy Stack</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <i class="material-icons-outlined">share</i>
+                <h3>Federated Learning</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Architecting decentralized training protocols for cross-silo and cross-device scenarios.</p>
+                <div class="tag-cloud">
+                    <span class="tag">Vertical FL</span><span class="tag">Horizontal FL</span><span class="tag">Aggregation</span>
+                </div>
+            </div>
+            <div class="card">
+                <i class="material-icons-outlined">functions</i>
+                <h3>Secure Computation</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Leveraging SecretFlow (SPU/HEU) and TenSEAL for encrypted data processing.</p>
+                <div class="tag-cloud">
+                    <span class="tag">MPC</span><span class="tag">FHE</span><span class="tag">TEE</span>
+                </div>
+            </div>
+            <div class="card">
+                <i class="material-icons-outlined">calculate</i>
+                <h3>Advanced Math</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Expertise in Matrix Theory, Jordan Forms, and Post-Quantum Cryptography (PQC).</p>
+                <div class="tag-cloud">
+                    <span class="tag">Hermite Forms</span><span class="tag">PQC Tunnels</span>
+                </div>
+            </div>
+            
+<div class="card">
+    <i class="material-icons-outlined">blur_on</i>
+    <h3>Differential Privacy</h3>
+    <p style="color: var(--text-dim); font-size: 0.9rem;">
+        Implementing mathematical frameworks to provide strong privacy guarantees via noise injection and sensitivity analysis.
+    </p>
+    <div class="tag-cloud">
+        <span class="tag">Gaussian/Laplace Noise</span>
+        <span class="tag">Privacy Budget (ε, δ)</span>
+        <span class="tag">DP-SGD</span>
+    </div>
+</div>
+
+
+<div class="card">
+    <i class="material-icons-outlined">all_inclusive</i>
+    <h3>Homomorphic Encryption</h3>
+    <p style="color: var(--text-dim); font-size: 0.9rem;">
+        Enabling complex computations on encrypted data without ever revealing the underlying plaintext.
+    </p>
+    <div class="tag-cloud">
+        <span class="tag">CKKS / BFV</span>
+        <span class="tag">TenSEAL</span>
+        <span class="tag">Bootstrapping</span>
+        <span class="tag">Ciphertext Ops</span>
+    </div>
+</div>
+        </div>
+    </section>
+
+    
+    <section id="publications" style="background: rgba(255,255,255,0.01);">
+        <div class="section-header">
+            <p class="section-tag">Academic Contributions</p>
+            <h2 class="section-title">Research Publications</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card pub-card">
+                <span class="status-badge">Published</span>
+                <h4 style="margin-bottom: 15px;">Leveraging FHE for Private Proximity Queries in VANETs</h4>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 20px;">
+                    Focusing on anonymous EV charging station discovery using Fully Homomorphic Encryption.
+                </p>
+                <a href="ITSC26_0571_MS.pdf" target="_blank" style="color: var(--primary); font-size: 0.8rem; font-weight: 700; text-decoration: none;">READ PAPER →</a>
+            </div>
+             <div class="card pub-card">
+                <span class="status-badge" style="background: rgba(99,102,241,0.1); color: var(--primary);">Under Review</span>
+                <h4 style="margin-bottom: 15px;">Privacy-Preserving Thermal
+Runaway Prediction in V2G Networks
+via Hybrid FHE + MPC-FSS Architecture</h4>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 20px;">
+                    
+                </p>
+                <a href="abs1.html" style="color: var(--primary); font-size: 0.8rem; font-weight: 700; text-decoration: none;">VIEW ABSTRACT →</a>
+            </div>
+            <div class="card pub-card">
+                <span class="status-badge" style="background: rgba(99,102,241,0.1); color: var(--primary);">Under Review</span>
+                <h4 style="margin-bottom: 15px;">Post-Quantum Cryptography in NG-Firewalls</h4>
+                <p style="color: var(--text-dim); font-size: 0.85rem; margin-bottom: 20px;">
+                    Integration of PQC protocols into secure IPsec and GRE tunnels for future-proof networking.
+                </p>
+                <a href="abs.html" style="color: var(--primary); font-size: 0.8rem; font-weight: 700; text-decoration: none;">VIEW ABSTRACT →</a>
+            </div>
+        </div>
+    </section>
+    <section id="conferences">
+    <div class="section-header">
+        <p class="section-tag">Global Engagement</p>
+        <h2 class="section-title">Conferences & Talks</h2>
+    </div>
+
+    <div class="timeline">
+        
+        <div class="timeline-item">
+            <div class="timeline-date">MAY 2026</div>
+            <div class="timeline-content">
+                <div class="status-badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);">Upcoming Speaker</div>
+                <h3>International Conference on V2G Security</h3>
+                <p class="conf-location"><i class="material-icons-outlined">place</i> Virtual / Beijing, China</p>
+                <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+                    Presenting **SECURTHERM**: Advanced hybrid FHE+MPC architectures for real-time thermal monitoring in EV networks.
+                </p>
+                <div class="tag-cloud">
+                    <span class="tag">Technical Talk</span><span class="tag">PPAI</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">JAN 2026</div>
+            <div class="timeline-content">
+                <div class="status-badge" style="background: rgba(16, 185, 129, 0.1); color: var(--accent);">Poster Session</div>
+                <h3>Cybersecurity & Quantum Era Symposium</h3>
+                <p class="conf-location"><i class="material-icons-outlined">place</i> Shenzhen, China</p>
+                <p style="color: var(--text-dim); font-size: 0.9rem; margin-top: 10px;">
+                    Discussion on the integration of NIST-standardized PQC algorithms into hardware-accelerated security gateways.
+                </p>
+                <div class="tag-cloud">
+                    <span class="tag">Quantum Security</span><span class="tag">NGFW</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .timeline {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        padding-left: 30px;
+        border-left: 2px solid var(--border);
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 50px;
+        padding-left: 30px;
+    }
+
+    .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -41px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background: var(--bg);
+        border: 4px solid var(--primary);
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .timeline-date {
+        font-family: 'Space Grotesk';
+        font-weight: 800;
+        font-size: 0.85rem;
+        color: var(--primary);
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .timeline-content {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        padding: 25px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    .timeline-content:hover {
+        border-color: var(--primary);
+        transform: translateX(10px);
+    }
+
+    .conf-location {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        margin-top: 5px;
+    }
+
+    .timeline-content h3 {
+        font-family: 'Space Grotesk';
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+</style>
+
+    
+    <section id="projects">
+        <div class="section-header">
+            <p class="section-tag">Impact & Dev</p>
+            <h2 class="section-title">Key Realizations</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <i class="material-icons-outlined" style="color: var(--accent);">agriculture</i>
+                    <span class="tag">PPAI Solution</span>
+                </div>
+                <h3>SecurTherm</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; margin: 15px 0;">
+                    Thermal
+Runaway Prediction in V2G Networks
+via Hybrid FHE + MPC-FSS Architecture
+                </p>
+                <div class="tag-cloud">
+                    <span class="tag">SecretFlow</span><span class="tag">Python</span><span class="tag">MPC</span>
+                </div>
+            </div>
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <i class="material-icons-outlined" style="color: #f43f5e;">delivery_dining</i>
+                    <span class="tag">FinTech</span>
+                </div>
+                <h3>Wadunù Platform</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; margin: 15px 0;">
+                    Full-stack food delivery ecosystem for Benin featuring escrow payments and real-time tracking.
+                </p>
+                <div class="tag-cloud">
+                    <span class="tag">Flutter</span><span class="tag">Node.js</span><span class="tag">Dart</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="certs" style="margin-bottom: 100px;">
+       <div class="section-header">
+            <p class="section-tag">Professional Roadmap</p>
+            <h2 class="section-title">Certifications</h2>
+        
+        </div> 
+    </section>
+
+    <footer style="text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem;">
+        &copy; 2026 PPAI Developer & Researcher • Privacy is a Human Right
+    </footer>
+
+</body>
+</html>

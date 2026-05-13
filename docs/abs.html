@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research: PQC in NGFW | PPAI.RESEARCH</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #030712;
+            --card-bg: #0f172a;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        /* --- BACKGROUND --- */
+        .mesh {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 90% 10%, #1e1b4b 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* --- NAV --- */
+        .nav-simple {
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-simple a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .nav-simple a:hover { color: var(--primary); }
+
+        /* --- ARTICLE HEADER --- */
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 5% 100px;
+        }
+
+        .category-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .main-title {
+            font-family: 'Space Grotesk';
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 30px;
+            padding: 20px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 50px;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+
+        .meta-info strong { color: var(--text-main); }
+
+        /* --- CONTENT STYLE --- */
+        .abstract-body {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            text-align: justify;
+        }
+
+        .abstract-body p { margin-bottom: 25px; }
+
+        .keywords {
+            margin-top: 50px;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .keyword-pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            margin: 5px;
+            color: var(--text-dim);
+        }
+
+        /* --- FOOTER CTA --- */
+        .download-box {
+            margin-top: 60px;
+            text-align: center;
+            padding: 40px;
+            border: 2px dashed var(--border);
+            border-radius: 30px;
+        }
+
+        .btn-download {
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            transition: 0.3s;
+        }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5); }
+    </style>
+</head>
+<body>
+
+    <div class="mesh"></div>
+
+    <nav class="nav-simple">
+        <a href="index.html"><i class="material-icons-outlined">arrow_back</i> Back to Portfolio</a>
+    </nav>
+
+    <article class="article-container">
+        <span class="category-tag">Network Security & Cryptography</span>
+        <h1 class="main-title">Integrating Post-Quantum Cryptography into Next-Generation Firewalls</h1>
+        
+        <div class="meta-info">
+            <span>By <strong>Rodney Donald HOUNKANRIN</strong></span>
+            <span>Date: <strong>NOV 2025</strong></span>
+            <span>Focus: <strong>PQC / NGFW / HNDL Attacks</strong></span>
+        </div>
+
+        <div class="abstract-body">
+            <p>
+                The ongoing evolution of quantum computing technology presents a fundamental, existential threat to current public-key cryptosystems, such as RSA and ECC. Next-Generation Firewalls (NGFWs), which serve as the primary defense layer in modern network security, face severe challenges to their long-term security and functional integrity. This article explores the imperative, technical feasibility, and critical engineering challenges associated with integrating Post-Quantum Cryptography (PQC) into high-performance NGFWs.
+            </p>
+            <p>
+                We begin by assessing the immediacy of the quantum threat and the heavy reliance of core NGFW functionalities—specifically TLS/VPN tunnel termination, Deep Packet Inspection (DPI), and certificate-based authentication—on classical cryptographic algorithms.
+            </p>
+            <p>
+                The analysis then proceeds to examine the principal PQC schemes standardized by NIST, with a focus on lattice-based cryptography mechanisms, such as <strong>Kyber</strong>, when used as Key Encapsulation Mechanisms (KEMs). A significant portion of this research is dedicated to optimizing PQC performance on NGFW hardware acceleration modules, such as FPGAs and ASICs.
+            </p>
+            <p>
+                We propose and analyze a <strong>Hybrid-Mode PQC Integration Architecture</strong>. This framework is designed to enable NGFWs to progressively deploy PQC capabilities while maintaining seamless interoperability with existing systems, thereby effectively mitigating the immediate risk of "Harvest Now, Decrypt Later" (HNDL) attacks.
+            </p>
+            <p>
+                The article concludes with an in-depth discussion on the inevitable trade-offs between PQC integration and NGFW throughput and latency, suggesting optimization strategies for resource balancing and efficient algorithm switching within high-speed security gateways.
+            </p>
+        </div>
+
+        <div class="keywords">
+            <h4 style="margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; color: var(--primary);">Index Keywords</h4>
+            <div style="margin-left: -5px;">
+                <span class="keyword-pill">Post-Quantum Cryptography</span>
+                <span class="keyword-pill">Next-Generation Firewall</span>
+                <span class="keyword-pill">Quantum Security</span>
+                <span class="keyword-pill">Lattice-Based Cryptography</span>
+                <span class="keyword-pill">TLS/VPN</span>
+                <span class="keyword-pill">Deep Packet Inspection</span>
+            </div>
+        </div>
+
+        <div class="download-box">
+            <p style="margin-bottom: 20px; color: var(--text-dim);">Want to read the full technical implementation and performance analysis?</p>
+            <a href="#" class="btn-download">
+                <i class="material-icons-outlined">file_download</i> Download Full Research Paper
+            </a>
+        </div>
+    </article>
+
+    <footer style="text-align: center; padding: 50px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem;">
+        &copy; 2026 PPAI Research • Secure the Future
+    </footer>
+
+</body>
+</html>

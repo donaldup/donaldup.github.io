@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research: SECURTHERM | PPAI.RESEARCH</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #030712;
+            --card-bg: #0f172a;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --accent: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        /* --- BACKGROUND MESH --- */
+        .mesh {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 90% 10%, #1e1b4b 0%, transparent 40%);
+            z-index: -1;
+        }
+
+        /* --- NAVIGATION --- */
+        .nav-simple {
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-simple a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+        .nav-simple a:hover { color: var(--primary); }
+
+        /* --- CONTAINER --- */
+        .article-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 5% 100px;
+        }
+
+        .category-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .main-title {
+            font-family: 'Space Grotesk';
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+            color: var(--text-dim);
+            font-size: 0.85rem;
+        }
+        .meta-info strong { color: var(--text-main); }
+
+        /* --- PERFORMANCE HIGHLIGHTS --- */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .stat-card:hover { border-color: var(--primary); background: rgba(99, 102, 241, 0.05); }
+        .stat-value { display: block; font-size: 1.6rem; font-weight: 800; color: var(--primary); font-family: 'Space Grotesk'; }
+        .stat-label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- BODY CONTENT --- */
+        .abstract-body {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            text-align: justify;
+        }
+        .abstract-body p { margin-bottom: 25px; }
+        .abstract-body strong { color: var(--primary); }
+
+        /* --- KEYWORDS --- */
+        .keywords {
+            margin-top: 50px;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+        }
+        .keyword-pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            margin: 4px;
+            color: var(--text-dim);
+            border: 1px solid transparent;
+        }
+        .keyword-pill:hover { border-color: var(--primary); color: white; }
+
+        /* --- DOWNLOAD --- */
+        .download-box {
+            margin-top: 60px;
+            text-align: center;
+            padding: 50px;
+            border: 2px dashed var(--border);
+            border-radius: 32px;
+        }
+        .btn-download {
+            background: var(--primary);
+            color: white;
+            padding: 16px 38px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            transition: 0.3s;
+        }
+        .btn-download:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5); }
+
+    </style>
+</head>
+<body>
+
+    <div class="mesh"></div>
+
+    <nav class="nav-simple">
+        <a href="index.html"><i class="material-icons-outlined">arrow_back</i> Return to Expertise</a>
+    </nav>
+
+    <article class="article-container">
+        <span class="category-tag">V2G Security • Hybrid PPAI</span>
+        <h1 class="main-title">SECURTHERM: A Hybrid FHE + MPC-FSS Architecture for Battery Monitoring</h1>
+        
+        <div class="meta-info">
+            <span>Author: <strong>Rodney Donald HOUNKANRIN</strong></span>
+            <span>Date: <strong>May 2026</strong></span>
+            <span>Framework: <strong>SecretFlow (HEU/SPU)</strong></span>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-value">115ms</span>
+                <span class="stat-label">Latency / Sample</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">98.0%</span>
+                <span class="stat-label">F1 Accuracy</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">5.4x</span>
+                <span class="stat-label">Speedup vs FHE</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value">8MB</span>
+                <span class="stat-label">Online Bandwidth</span>
+            </div>
+        </div>
+
+        <div class="abstract-body">
+            <p>
+                Vehicle-to-Grid (V2G) networks enable bidirectional energy exchange between electric vehicles and the power grid, but the associated real-time battery monitoring raises significant privacy concerns: raw thermal data can expose user behavior, location patterns, and driving schedules.
+            </p>
+            
+            <p>
+                This paper presents <strong>SECURTHERM</strong>, a novel hybrid architecture that combines <strong>Fully Homomorphic Encryption (FHE)</strong> with <strong>Multi-Party Computation (MPC)</strong> using Function Secret Sharing (FSS). By leveraging these technologies, we mitigate the high computational cost of FHE and the communication overhead typical of pure MPC approaches.
+            </p>
+
+            <p>
+                The architecture is implemented using the <strong>SecretFlow</strong> framework. We utilize the Homomorphic Encryption Unit (HEU) for secure linear aggregations and the Secure Processing Unit (SPU) for efficient threshold comparisons via FSS. 
+            </p>
+
+            <p>
+                Our evaluation on the Kaggle EV Battery dataset (10,000 samples) demonstrates that SECURTHERM matching plaintext performance within statistical tolerance (p = 0.342) while achieving a <strong>5.4× faster inference time</strong> and <strong>82% bandwidth reduction</strong> compared to traditional MPC-FSS methods.
+            </p>
+        </div>
+
+        <div class="keywords">
+            <h4 style="margin-bottom: 15px; font-size: 0.8rem; text-transform: uppercase; color: var(--primary); letter-spacing: 1px;">Research Keywords</h4>
+            <div style="margin-left: -5px;">
+                <span class="keyword-pill">Vehicle-to-Grid</span>
+                <span class="keyword-pill">Thermal Runaway</span>
+                <span class="keyword-pill">Privacy-Preserving ML</span>
+                <span class="keyword-pill">SecretFlow</span>
+                <span class="keyword-pill">Homomorphic Encryption</span>
+                <span class="keyword-pill">Multi-Party Computation</span>
+            </div>
+        </div>
+
+        <div class="download-box">
+            <p style="margin-bottom: 25px; color: var(--text-dim); font-size: 0.95rem;">Interested in the formal security proofs and complexity analysis?</p>
+            <a href="#" class="btn-download">
+                <i class="material-icons-outlined">file_download</i> Download Full Manuscript
+            </a>
+        </div>
+    </article>
+
+    <footer style="text-align: center; padding: 60px 0; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem;">
+        &copy; 2026 PPAI Developer • Advanced Privacy Systems
+    </footer>
+
+</body>
+</html>
